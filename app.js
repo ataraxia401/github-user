@@ -22,11 +22,17 @@ searchUser.addEventListener('keyup', (e) => {
                 } else {
                     //show profile
                     ui.showProfile(data.profile)
+                    ui.showRepos(data.repos)
                 }
                 console.log(data)
             })
+            .catch((err) => {
+                console.log(err)
+            });
     } else {
         // clear profile
         ui.clearProfile()
+       
+        
     }
 })
